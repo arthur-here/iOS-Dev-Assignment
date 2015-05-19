@@ -25,11 +25,18 @@
                             <outlet property="delegate" destination="hTj-01-UG1" id="Akl-yr-MAN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JJ5-36-HAw"/>
-                    <connections>
-                        <segue destination="DXV-3D-V9Q" kind="show" identifier="toResultView" id="fd0-AG-dFq"/>
-                        <segue destination="MBD-Sq-VBW" kind="presentation" id="bDn-Jn-yKp"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="JJ5-36-HAw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="xwA-vM-BG9">
+                            <connections>
+                                <segue destination="MBD-Sq-VBW" kind="presentation" identifier="toGoodsList" id="hV4-mM-xxD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yBH-2Y-T6R">
+                            <connections>
+                                <segue destination="DXV-3D-V9Q" kind="show" identifier="toResultView" id="ou6-oS-lix"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di2-fS-xlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +53,14 @@
                     <view key="view" contentMode="scaleToFill" id="hgT-Sf-eeq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4L-lM-2zY">
+                                <rect key="frame" x="260" y="132" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

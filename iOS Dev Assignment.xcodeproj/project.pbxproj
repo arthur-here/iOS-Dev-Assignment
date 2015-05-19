@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40113D1B0BC2A600BC759A /* AppDelegate.swift */; };
-		EC4011401B0BC2A600BC759A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40113F1B0BC2A600BC759A /* ViewController.swift */; };
 		EC4011431B0BC2A600BC759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4011411B0BC2A600BC759A /* Main.storyboard */; };
 		EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4011441B0BC2A600BC759A /* Images.xcassets */; };
 		EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4011461B0BC2A600BC759A /* LaunchScreen.xib */; };
@@ -29,7 +28,6 @@
 		EC4011381B0BC2A600BC759A /* iOS Dev Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Dev Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC40113C1B0BC2A600BC759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC40113D1B0BC2A600BC759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC40113F1B0BC2A600BC759A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC4011421B0BC2A600BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC4011441B0BC2A600BC759A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC4011471B0BC2A600BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -77,11 +75,7 @@
 		EC40113A1B0BC2A600BC759A /* iOS Dev Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				EC40113D1B0BC2A600BC759A /* AppDelegate.swift */,
-				EC40113F1B0BC2A600BC759A /* ViewController.swift */,
 				EC4011411B0BC2A600BC759A /* Main.storyboard */,
-				EC4011441B0BC2A600BC759A /* Images.xcassets */,
-				EC4011461B0BC2A600BC759A /* LaunchScreen.xib */,
 				EC40113B1B0BC2A600BC759A /* Supporting Files */,
 			);
 			path = "iOS Dev Assignment";
@@ -90,6 +84,9 @@
 		EC40113B1B0BC2A600BC759A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC4011441B0BC2A600BC759A /* Images.xcassets */,
+				EC4011461B0BC2A600BC759A /* LaunchScreen.xib */,
+				EC40113D1B0BC2A600BC759A /* AppDelegate.swift */,
 				EC40113C1B0BC2A600BC759A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4011401B0BC2A600BC759A /* ViewController.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
