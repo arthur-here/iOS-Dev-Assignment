@@ -18,6 +18,7 @@
 		EC4011651B0BC81C00BC759A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011641B0BC81C00BC759A /* Currency.swift */; };
 		EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */; };
 		EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */; };
+		EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40116F1B0BD2E400BC759A /* BasketTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		EC4011641B0BC81C00BC759A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Model/Currency.swift; sourceTree = "<group>"; };
 		EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRatesAPI.swift; path = Utilities/JSONRatesAPI.swift; sourceTree = "<group>"; };
 		EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "Third Parties/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		EC40116F1B0BD2E400BC759A /* BasketTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketTVC.swift; path = Controller/BasketTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4011411B0BC2A600BC759A /* Main.storyboard */,
+				EC40116E1B0BD26D00BC759A /* Controller */,
 				EC4011681B0BCACD00BC759A /* Utilities */,
 				EC40115F1B0BC62900BC759A /* Model */,
 				EC40116B1B0BCB3400BC759A /* Third Parties */,
@@ -149,6 +152,14 @@
 				EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */,
 			);
 			name = "Third Parties";
+			sourceTree = "<group>";
+		};
+		EC40116E1B0BD26D00BC759A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC40116F1B0BD2E400BC759A /* BasketTVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
 				EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */,
+				EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */,
 				EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */,
 				EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */,
 			);
