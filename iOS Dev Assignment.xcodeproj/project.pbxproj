@@ -12,6 +12,10 @@
 		EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4011441B0BC2A600BC759A /* Images.xcassets */; };
 		EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4011461B0BC2A600BC759A /* LaunchScreen.xib */; };
 		EC4011541B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011531B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift */; };
+		EC40115E1B0BC62400BC759A /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40115D1B0BC62400BC759A /* Good.swift */; };
+		EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011601B0BC6BB00BC759A /* Purchase.swift */; };
+		EC4011631B0BC73400BC759A /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011621B0BC73400BC759A /* Basket.swift */; };
+		EC4011651B0BC81C00BC759A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011641B0BC81C00BC759A /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		EC40114D1B0BC2A600BC759A /* iOS Dev AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Dev AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4011521B0BC2A600BC759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC4011531B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Dev_AssignmentTests.swift; sourceTree = "<group>"; };
+		EC40115D1B0BC62400BC759A /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Good.swift; path = Model/Good.swift; sourceTree = "<group>"; };
+		EC4011601B0BC6BB00BC759A /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Model/Purchase.swift; sourceTree = "<group>"; };
+		EC4011621B0BC73400BC759A /* Basket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Basket.swift; path = Model/Basket.swift; sourceTree = "<group>"; };
+		EC4011641B0BC81C00BC759A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Model/Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 			children = (
 				EC4011411B0BC2A600BC759A /* Main.storyboard */,
 				EC40113B1B0BC2A600BC759A /* Supporting Files */,
+				EC40115F1B0BC62900BC759A /* Model */,
 			);
 			path = "iOS Dev Assignment";
 			sourceTree = "<group>";
@@ -107,6 +116,17 @@
 				EC4011521B0BC2A600BC759A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC40115F1B0BC62900BC759A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC40115D1B0BC62400BC759A /* Good.swift */,
+				EC4011601B0BC6BB00BC759A /* Purchase.swift */,
+				EC4011621B0BC73400BC759A /* Basket.swift */,
+				EC4011641B0BC81C00BC759A /* Currency.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC40115E1B0BC62400BC759A /* Good.swift in Sources */,
+				EC4011651B0BC81C00BC759A /* Currency.swift in Sources */,
+				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
+				EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
