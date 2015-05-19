@@ -10,7 +10,7 @@ import Foundation
 
 class Purchase {
     let good: Good
-    let amount: Int
+    var amount: Int
     
     init(good: Good, amount: Int) {
         self.good = good

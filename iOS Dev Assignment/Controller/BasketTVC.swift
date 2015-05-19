@@ -19,14 +19,14 @@ class BaketTVC: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItems?.append(self.editButtonItem())
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
-
+    
     // MARK: - UITableViewDataSource
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -48,7 +48,6 @@ class BaketTVC: UITableViewController {
 
         return cell
     }
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,14 +84,19 @@ class BaketTVC: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "toGoodsList") {
+            let dvc = segue.destinationViewController as! GoodsListTVC
+            dvc.basket = basket
+        } else if (segue.identifier == "toResultView") {
+            let dvc = segue.destinationViewController as! TotalPriceVC
+            dvc.basket = basket
+        }
     }
-    */
+
 
 }

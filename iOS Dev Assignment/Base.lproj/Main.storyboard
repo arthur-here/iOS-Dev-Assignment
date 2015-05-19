@@ -8,7 +8,7 @@
         <!--Purchases List-->
         <scene sceneID="lEl-mS-aw1">
             <objects>
-                <tableViewController title="Purchases List" id="hTj-01-UG1" sceneMemberID="viewController">
+                <tableViewController title="Purchases List" id="hTj-01-UG1" customClass="BaketTVC" customModule="iOS_Dev_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yw6-iN-oB5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                 <segue destination="MBD-Sq-VBW" kind="show" identifier="toGoodsList" id="hV4-mM-xxD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yBH-2Y-T6R">
+                        <barButtonItem key="rightBarButtonItem" title="Total" style="done" id="yBH-2Y-T6R">
                             <connections>
                                 <segue destination="DXV-3D-V9Q" kind="show" identifier="toResultView" id="ou6-oS-lix"/>
                             </connections>
@@ -60,7 +60,7 @@
         <!--Result View-->
         <scene sceneID="abm-ZF-Vfb">
             <objects>
-                <viewController title="Result View" id="DXV-3D-V9Q" sceneMemberID="viewController">
+                <viewController title="Result View" id="DXV-3D-V9Q" customClass="TotalPriceVC" customModule="iOS_Dev_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xHR-cl-8nz"/>
                         <viewControllerLayoutGuide type="bottom" id="4RO-fU-UQA"/>
@@ -88,6 +88,10 @@
                             <constraint firstItem="A4L-lM-2zY" firstAttribute="top" secondItem="xHR-cl-8nz" secondAttribute="bottom" constant="68" id="qNO-Pj-Usd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyPicker" destination="7tb-IB-hKz" id="KOM-xh-peP"/>
+                        <outlet property="totalPriceLabel" destination="A4L-lM-2zY" id="hMZ-8o-s52"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqa-PB-rXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,16 +100,30 @@
         <!--Goods List-->
         <scene sceneID="vGp-PN-xLw">
             <objects>
-                <tableViewController title="Goods List" id="MBD-Sq-VBW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l1b-0t-vzl">
+                <tableViewController title="Goods List" id="MBD-Sq-VBW" customClass="GoodsListTVC" customModule="iOS_Dev_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l1b-0t-vzl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodCell" id="xn6-X1-bM4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GoodCell" textLabel="ALq-hK-oGP" detailTextLabel="Ngo-gC-Hqs" style="IBUITableViewCellStyleValue1" id="xn6-X1-bM4">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xn6-X1-bM4" id="sLp-rX-eBR">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ALq-hK-oGP">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ngo-gC-Hqs">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -114,10 +132,89 @@
                             <outlet property="delegate" destination="MBD-Sq-VBW" id="pOc-x3-331"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Goods List" id="MpO-W4-Z7B">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="anj-zU-n3m">
+                            <connections>
+                                <action selector="saveButtonTouch:" destination="MBD-Sq-VBW" id="zFL-I8-aPm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Z6B-pk-agA" kind="show" identifier="toAmountSelect" id="NFl-U6-yDD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLt-eJ-FxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="1249"/>
+        </scene>
+        <!--Set amount of good to purchase-->
+        <scene sceneID="KoB-Rh-cai">
+            <objects>
+                <tableViewController id="Z6B-pk-agA" customClass="SelectGoodVC" customModule="iOS_Dev_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="QA8-K5-e0U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Amount of good" id="EBe-uR-hRB">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vsl-HF-MMD">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vsl-HF-MMD" id="JRl-d5-HDb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pvO-9F-Y3F">
+                                                    <rect key="frame" x="499" y="7" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="stepperValueChanged:" destination="Z6B-pk-agA" eventType="valueChanged" id="4YP-f3-aP3"/>
+                                                    </connections>
+                                                </stepper>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGT-n3-CFt">
+                                                    <rect key="frame" x="8" y="11" width="93" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peu-R5-2UT">
+                                                    <rect key="frame" x="432" y="11" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="peu-R5-2UT" secondAttribute="centerY" id="L8S-UW-QDl"/>
+                                                <constraint firstItem="pvO-9F-Y3F" firstAttribute="leading" secondItem="peu-R5-2UT" secondAttribute="trailing" constant="8" id="QzZ-xb-Fk1"/>
+                                                <constraint firstItem="pvO-9F-Y3F" firstAttribute="centerY" secondItem="JRl-d5-HDb" secondAttribute="centerY" id="Sph-mk-1Uq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pvO-9F-Y3F" secondAttribute="trailing" constant="-1" id="dT8-S7-EQK"/>
+                                                <constraint firstAttribute="centerY" secondItem="nGT-n3-CFt" secondAttribute="centerY" id="fqr-e3-OUT"/>
+                                                <constraint firstItem="nGT-n3-CFt" firstAttribute="leading" secondItem="JRl-d5-HDb" secondAttribute="leadingMargin" id="pCI-Rb-HyK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Z6B-pk-agA" id="0xT-oO-eSi"/>
+                            <outlet property="delegate" destination="Z6B-pk-agA" id="LzD-xB-X69"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Set amount of good to purchase" id="dkd-tT-wUu">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="LZo-Ml-Eer">
+                            <connections>
+                                <action selector="doneButtonTouch:" destination="Z6B-pk-agA" id="1a2-Ku-DqQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="amountLabel" destination="peu-R5-2UT" id="CpQ-um-Kt6"/>
+                        <outlet property="goodName" destination="nGT-n3-CFt" id="T2J-Fc-vLI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7h9-wo-UTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="1249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yDV-Uu-tqy">

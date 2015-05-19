@@ -45,8 +45,8 @@ class JSONRatesAPI {
             if let rates = json["rates"].dictionary {
                 var ratesDictionary = [String: Double]()
                 for rate in rates {
-                    if let price = rate.1.double {
-                        ratesDictionary.updateValue(price, forKey: rate.0)
+                    if let priceString = rate.1.string {
+                        ratesDictionary.updateValue((priceString as NSString).doubleValue, forKey: rate.0)
                     }
                 }
                 completionHander(ratesDictionary)

@@ -19,6 +19,9 @@
 		EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */; };
 		EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */; };
 		EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40116F1B0BD2E400BC759A /* BasketTVC.swift */; };
+		EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011711B0BD70700BC759A /* GoodsListTVC.swift */; };
+		EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */; };
+		EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRatesAPI.swift; path = Utilities/JSONRatesAPI.swift; sourceTree = "<group>"; };
 		EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "Third Parties/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EC40116F1B0BD2E400BC759A /* BasketTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketTVC.swift; path = Controller/BasketTVC.swift; sourceTree = "<group>"; };
+		EC4011711B0BD70700BC759A /* GoodsListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListTVC.swift; path = Controller/GoodsListTVC.swift; sourceTree = "<group>"; };
+		EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectGoodVC.swift; path = Controller/SelectGoodVC.swift; sourceTree = "<group>"; };
+		EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TotalPriceVC.swift; path = Controller/TotalPriceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +163,10 @@
 		EC40116E1B0BD26D00BC759A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */,
 				EC40116F1B0BD2E400BC759A /* BasketTVC.swift */,
+				EC4011711B0BD70700BC759A /* GoodsListTVC.swift */,
+				EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
 				EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */,
+				EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */,
 				EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */,
+				EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */,
+				EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */,
 				EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */,
 				EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */,
 			);
