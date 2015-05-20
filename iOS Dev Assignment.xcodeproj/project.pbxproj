@@ -12,20 +12,15 @@
 		EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4011441B0BC2A600BC759A /* Images.xcassets */; };
 		EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4011461B0BC2A600BC759A /* LaunchScreen.xib */; };
 		EC4011541B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011531B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift */; };
-		EC40115E1B0BC62400BC759A /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40115D1B0BC62400BC759A /* Good.swift */; };
-		EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011601B0BC6BB00BC759A /* Purchase.swift */; };
+		EC40115E1B0BC62400BC759A /* GoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40115D1B0BC62400BC759A /* GoodItem.swift */; };
 		EC4011631B0BC73400BC759A /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011621B0BC73400BC759A /* Basket.swift */; };
 		EC4011651B0BC81C00BC759A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011641B0BC81C00BC759A /* Currency.swift */; };
 		EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */; };
 		EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */; };
-		EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40116F1B0BD2E400BC759A /* BasketTVC.swift */; };
-		EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011711B0BD70700BC759A /* GoodsListTVC.swift */; };
-		EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */; };
-		EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */; };
 		EC4011791B0C70A800BC759A /* UI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4011771B0C70A800BC759A /* UI.storyboard */; };
-		EC40117B1B0C75C800BC759A /* GoodCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC40117A1B0C75C800BC759A /* GoodCardView.xib */; };
+		EC40117B1B0C75C800BC759A /* GoodCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC40117A1B0C75C800BC759A /* GoodCardCell.xib */; };
 		EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117C1B0C75E100BC759A /* PrettyImageView.swift */; };
-		EC4011801B0C7E6D00BC759A /* GoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */; };
+		EC4011801B0C7E6D00BC759A /* GoodCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */; };
 		EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011811B0C822A00BC759A /* GoodsListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,20 +44,15 @@
 		EC40114D1B0BC2A600BC759A /* iOS Dev AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Dev AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4011521B0BC2A600BC759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC4011531B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Dev_AssignmentTests.swift; sourceTree = "<group>"; };
-		EC40115D1B0BC62400BC759A /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Good.swift; path = Model/Good.swift; sourceTree = "<group>"; };
-		EC4011601B0BC6BB00BC759A /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Purchase.swift; path = Model/Purchase.swift; sourceTree = "<group>"; };
+		EC40115D1B0BC62400BC759A /* GoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodItem.swift; path = Model/GoodItem.swift; sourceTree = "<group>"; };
 		EC4011621B0BC73400BC759A /* Basket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Basket.swift; path = Model/Basket.swift; sourceTree = "<group>"; };
 		EC4011641B0BC81C00BC759A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Model/Currency.swift; sourceTree = "<group>"; };
 		EC4011661B0BCABD00BC759A /* JSONRatesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRatesAPI.swift; path = Utilities/JSONRatesAPI.swift; sourceTree = "<group>"; };
 		EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "Third Parties/SwiftyJSON.swift"; sourceTree = "<group>"; };
-		EC40116F1B0BD2E400BC759A /* BasketTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketTVC.swift; path = Controller/BasketTVC.swift; sourceTree = "<group>"; };
-		EC4011711B0BD70700BC759A /* GoodsListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListTVC.swift; path = Controller/GoodsListTVC.swift; sourceTree = "<group>"; };
-		EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectGoodVC.swift; path = Controller/SelectGoodVC.swift; sourceTree = "<group>"; };
-		EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TotalPriceVC.swift; path = Controller/TotalPriceVC.swift; sourceTree = "<group>"; };
 		EC4011781B0C70A800BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iOS Dev Assignment/Base.lproj/UI.storyboard"; sourceTree = "<group>"; };
-		EC40117A1B0C75C800BC759A /* GoodCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoodCardView.xib; path = View/GoodCardView.xib; sourceTree = "<group>"; };
+		EC40117A1B0C75C800BC759A /* GoodCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoodCardCell.xib; path = View/GoodCardCell.xib; sourceTree = "<group>"; };
 		EC40117C1B0C75E100BC759A /* PrettyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrettyImageView.swift; path = "Third Parties/PrettyImageView.swift"; sourceTree = "<group>"; };
-		EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodCardView.swift; path = View/GoodCardView.swift; sourceTree = "<group>"; };
+		EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodCardCell.swift; path = View/GoodCardCell.swift; sourceTree = "<group>"; };
 		EC4011811B0C822A00BC759A /* GoodsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListViewController.swift; path = Controller/GoodsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,8 +138,7 @@
 		EC40115F1B0BC62900BC759A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC40115D1B0BC62400BC759A /* Good.swift */,
-				EC4011601B0BC6BB00BC759A /* Purchase.swift */,
+				EC40115D1B0BC62400BC759A /* GoodItem.swift */,
 				EC4011621B0BC73400BC759A /* Basket.swift */,
 				EC4011641B0BC81C00BC759A /* Currency.swift */,
 			);
@@ -176,10 +165,7 @@
 		EC40116E1B0BD26D00BC759A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */,
-				EC40116F1B0BD2E400BC759A /* BasketTVC.swift */,
-				EC4011711B0BD70700BC759A /* GoodsListTVC.swift */,
-				EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */,
+				EC4011811B0C822A00BC759A /* GoodsListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -187,9 +173,8 @@
 		EC40117E1B0C7E5100BC759A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC40117A1B0C75C800BC759A /* GoodCardView.xib */,
-				EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */,
-				EC4011811B0C822A00BC759A /* GoodsListViewController.swift */,
+				EC40117A1B0C75C800BC759A /* GoodCardCell.xib */,
+				EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4011431B0BC2A600BC759A /* Main.storyboard in Resources */,
-				EC40117B1B0C75C800BC759A /* GoodCardView.xib in Resources */,
+				EC40117B1B0C75C800BC759A /* GoodCardCell.xib in Resources */,
 				EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */,
 				EC4011791B0C70A800BC759A /* UI.storyboard in Resources */,
 				EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */,
@@ -296,19 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC40115E1B0BC62400BC759A /* Good.swift in Sources */,
-				EC4011801B0C7E6D00BC759A /* GoodCardView.swift in Sources */,
+				EC40115E1B0BC62400BC759A /* GoodItem.swift in Sources */,
+				EC4011801B0C7E6D00BC759A /* GoodCardCell.swift in Sources */,
 				EC4011651B0BC81C00BC759A /* Currency.swift in Sources */,
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
 				EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */,
-				EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */,
 				EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */,
-				EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */,
-				EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */,
-				EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */,
 				EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */,
-				EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */,
 				EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

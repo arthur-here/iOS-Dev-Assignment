@@ -8,12 +8,15 @@
 
 import UIKit
 
-class GoodCardView: UICollectionViewCell {
+class GoodCardCell: UICollectionViewCell {
 
     @IBOutlet weak var goodNameLabel: UILabel!
     @IBOutlet weak var goodPriceLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var goodImageView: UIView!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
+    
     var image: UIImage? {
         didSet {
             let imageView = PrettyImageView(image: image, frame: goodImageView.bounds)
@@ -23,10 +26,8 @@ class GoodCardView: UICollectionViewCell {
         }
     }
     
-    @IBAction func minusButtonTouch() {
+    override func didMoveToSuperview() {
+        layer.cornerRadius = 3
+        layer.masksToBounds = true
     }
-    
-    @IBAction func plusButtonTouch() {
-    }
-
 }
