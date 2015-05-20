@@ -22,6 +22,7 @@
 		EC4011801B0C7E6D00BC759A /* GoodCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */; };
 		EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011811B0C822A00BC759A /* GoodsListViewController.swift */; };
 		EC4011841B0D1CB900BC759A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011831B0D1CB900BC759A /* ResultViewController.swift */; };
+		EC8162A61B0D27D500FBA749 /* SelectCurrencyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8162A51B0D27D500FBA749 /* SelectCurrencyTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodCardCell.swift; path = View/GoodCardCell.swift; sourceTree = "<group>"; };
 		EC4011811B0C822A00BC759A /* GoodsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListViewController.swift; path = Controller/GoodsListViewController.swift; sourceTree = "<group>"; };
 		EC4011831B0D1CB900BC759A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = Controller/ResultViewController.swift; sourceTree = "<group>"; };
+		EC8162A51B0D27D500FBA749 /* SelectCurrencyTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCurrencyTVC.swift; path = Controller/SelectCurrencyTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				EC4011811B0C822A00BC759A /* GoodsListViewController.swift */,
 				EC4011831B0D1CB900BC759A /* ResultViewController.swift */,
+				EC8162A51B0D27D500FBA749 /* SelectCurrencyTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				EC40115E1B0BC62400BC759A /* GoodItem.swift in Sources */,
 				EC4011801B0C7E6D00BC759A /* GoodCardCell.swift in Sources */,
+				EC8162A61B0D27D500FBA749 /* SelectCurrencyTVC.swift in Sources */,
 				EC4011651B0BC81C00BC759A /* Currency.swift in Sources */,
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,

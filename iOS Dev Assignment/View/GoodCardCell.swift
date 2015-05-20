@@ -20,6 +20,7 @@ class GoodCardCell: UICollectionViewCell {
     var image: UIImage? {
         didSet {
             let imageView = PrettyImageView(image: image, frame: goodImageView.bounds)
+            imageView.animationDuration = 1.0
             goodImageView.subviews.first?.removeFromSuperview()
             goodImageView.addSubview(imageView)
             imageView.animate()

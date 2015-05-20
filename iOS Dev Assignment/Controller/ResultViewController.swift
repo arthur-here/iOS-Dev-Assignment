@@ -13,11 +13,16 @@ class ResultViewController: UIViewController, UITableViewDataSource {
     var basket: Basket!
 
     @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
+    }
+    
+    func reloadData() {
         totalPriceLabel.text = "Total price of your basket: \(basket.totalPrice) \(basket.currentCurrency.name)"
+        tableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource
@@ -41,14 +46,11 @@ class ResultViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toCurrencySelect" {
+            let scTVC = segue.destinationViewController as! SelectCurrencyTVC
+            scTVC.basket = basket
+        }
     }
-    */
 
 }
