@@ -22,6 +22,11 @@
 		EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011711B0BD70700BC759A /* GoodsListTVC.swift */; };
 		EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */; };
 		EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */; };
+		EC4011791B0C70A800BC759A /* UI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4011771B0C70A800BC759A /* UI.storyboard */; };
+		EC40117B1B0C75C800BC759A /* GoodCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC40117A1B0C75C800BC759A /* GoodCardView.xib */; };
+		EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117C1B0C75E100BC759A /* PrettyImageView.swift */; };
+		EC4011801B0C7E6D00BC759A /* GoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */; };
+		EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011811B0C822A00BC759A /* GoodsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		EC4011711B0BD70700BC759A /* GoodsListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListTVC.swift; path = Controller/GoodsListTVC.swift; sourceTree = "<group>"; };
 		EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectGoodVC.swift; path = Controller/SelectGoodVC.swift; sourceTree = "<group>"; };
 		EC4011751B0BEA7C00BC759A /* TotalPriceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TotalPriceVC.swift; path = Controller/TotalPriceVC.swift; sourceTree = "<group>"; };
+		EC4011781B0C70A800BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iOS Dev Assignment/Base.lproj/UI.storyboard"; sourceTree = "<group>"; };
+		EC40117A1B0C75C800BC759A /* GoodCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoodCardView.xib; path = View/GoodCardView.xib; sourceTree = "<group>"; };
+		EC40117C1B0C75E100BC759A /* PrettyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrettyImageView.swift; path = "Third Parties/PrettyImageView.swift"; sourceTree = "<group>"; };
+		EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodCardView.swift; path = View/GoodCardView.swift; sourceTree = "<group>"; };
+		EC4011811B0C822A00BC759A /* GoodsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListViewController.swift; path = Controller/GoodsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				EC4011411B0BC2A600BC759A /* Main.storyboard */,
+				EC4011771B0C70A800BC759A /* UI.storyboard */,
+				EC40117E1B0C7E5100BC759A /* View */,
 				EC40116E1B0BD26D00BC759A /* Controller */,
 				EC4011681B0BCACD00BC759A /* Utilities */,
 				EC40115F1B0BC62900BC759A /* Model */,
@@ -155,6 +167,7 @@
 		EC40116B1B0BCB3400BC759A /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
+				EC40117C1B0C75E100BC759A /* PrettyImageView.swift */,
 				EC4011691B0BCB3100BC759A /* SwiftyJSON.swift */,
 			);
 			name = "Third Parties";
@@ -169,6 +182,16 @@
 				EC4011731B0BDECE00BC759A /* SelectGoodVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC40117E1B0C7E5100BC759A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC40117A1B0C75C800BC759A /* GoodCardView.xib */,
+				EC40117F1B0C7E6D00BC759A /* GoodCardView.swift */,
+				EC4011811B0C822A00BC759A /* GoodsListViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4011431B0BC2A600BC759A /* Main.storyboard in Resources */,
+				EC40117B1B0C75C800BC759A /* GoodCardView.xib in Resources */,
 				EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */,
+				EC4011791B0C70A800BC759A /* UI.storyboard in Resources */,
 				EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,16 +297,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC40115E1B0BC62400BC759A /* Good.swift in Sources */,
+				EC4011801B0C7E6D00BC759A /* GoodCardView.swift in Sources */,
 				EC4011651B0BC81C00BC759A /* Currency.swift in Sources */,
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
 				EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */,
 				EC4011741B0BDECE00BC759A /* SelectGoodVC.swift in Sources */,
+				EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */,
 				EC4011701B0BD2E400BC759A /* BasketTVC.swift in Sources */,
 				EC4011721B0BD70700BC759A /* GoodsListTVC.swift in Sources */,
 				EC4011761B0BEA7C00BC759A /* TotalPriceVC.swift in Sources */,
 				EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */,
 				EC4011611B0BC6BB00BC759A /* Purchase.swift in Sources */,
+				EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +346,15 @@
 				EC4011471B0BC2A600BC759A /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EC4011771B0C70A800BC759A /* UI.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC4011781B0C70A800BC759A /* Base */,
+			);
+			name = UI.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
