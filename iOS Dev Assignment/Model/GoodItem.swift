@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodItem {
+class GoodItem : Hashable {
     let name: String
     let priceInGBP: Double
     let image: UIImage?
@@ -23,4 +23,15 @@ class GoodItem {
         self.init(name: name, priceInGBP: priceInGBP, image: nil)
     }
     
+    // MARK: - Hashable
+    
+    var hashValue: Int {
+        return "\(name) \(priceInGBP)".hashValue
+    }
+}
+
+// MARK: - Equatable
+
+func ==(lhs: GoodItem, rhs: GoodItem) -> Bool {
+    return lhs.hashValue == rhs.hashValue
 }

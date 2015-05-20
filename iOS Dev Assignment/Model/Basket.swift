@@ -16,6 +16,19 @@ class Basket {
         self.currentCurrency = currency
     }
     
+    var amount: Int { return goodsList.count }
+    
+    var goodsList: [GoodItem: Int] {
+        var result = [GoodItem: Int]()
+        for item in goods {
+            if !contains(result.keys, item) {
+                result[item] = 0
+            }
+            result[item]!++
+        }
+        return result
+    }
+    
     var totalPrice: Double {
         var total = 0.0
         for item in goods {
@@ -27,7 +40,7 @@ class Basket {
     func getAmountOfGoodItems(item: GoodItem) -> Int {
         var count = 0
         for i in goods {
-            if i === item {
+            if i == item {
                 count++
             }
         }
@@ -46,7 +59,7 @@ class Basket {
     
     private func getGoodItemIndex(item: GoodItem) -> Int? {
         for (i, g) in enumerate(goods) {
-            if g === item {
+            if g == item {
                 return i
             }
         }

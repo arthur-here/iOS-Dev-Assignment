@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40113D1B0BC2A600BC759A /* AppDelegate.swift */; };
-		EC4011431B0BC2A600BC759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4011411B0BC2A600BC759A /* Main.storyboard */; };
 		EC4011451B0BC2A600BC759A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4011441B0BC2A600BC759A /* Images.xcassets */; };
 		EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC4011461B0BC2A600BC759A /* LaunchScreen.xib */; };
 		EC4011541B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011531B0BC2A600BC759A /* iOS_Dev_AssignmentTests.swift */; };
@@ -22,6 +21,7 @@
 		EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117C1B0C75E100BC759A /* PrettyImageView.swift */; };
 		EC4011801B0C7E6D00BC759A /* GoodCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */; };
 		EC4011821B0C822A00BC759A /* GoodsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011811B0C822A00BC759A /* GoodsListViewController.swift */; };
+		EC4011841B0D1CB900BC759A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4011831B0D1CB900BC759A /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		EC4011381B0BC2A600BC759A /* iOS Dev Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Dev Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC40113C1B0BC2A600BC759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC40113D1B0BC2A600BC759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC4011421B0BC2A600BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC4011441B0BC2A600BC759A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC4011471B0BC2A600BC759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EC40114D1B0BC2A600BC759A /* iOS Dev AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Dev AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +53,7 @@
 		EC40117C1B0C75E100BC759A /* PrettyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrettyImageView.swift; path = "Third Parties/PrettyImageView.swift"; sourceTree = "<group>"; };
 		EC40117F1B0C7E6D00BC759A /* GoodCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodCardCell.swift; path = View/GoodCardCell.swift; sourceTree = "<group>"; };
 		EC4011811B0C822A00BC759A /* GoodsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoodsListViewController.swift; path = Controller/GoodsListViewController.swift; sourceTree = "<group>"; };
+		EC4011831B0D1CB900BC759A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = Controller/ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,6 @@
 		EC40113A1B0BC2A600BC759A /* iOS Dev Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				EC4011411B0BC2A600BC759A /* Main.storyboard */,
 				EC4011771B0C70A800BC759A /* UI.storyboard */,
 				EC40117E1B0C7E5100BC759A /* View */,
 				EC40116E1B0BD26D00BC759A /* Controller */,
@@ -166,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4011811B0C822A00BC759A /* GoodsListViewController.swift */,
+				EC4011831B0D1CB900BC759A /* ResultViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -259,7 +259,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4011431B0BC2A600BC759A /* Main.storyboard in Resources */,
 				EC40117B1B0C75C800BC759A /* GoodCardCell.xib in Resources */,
 				EC4011481B0BC2A600BC759A /* LaunchScreen.xib in Resources */,
 				EC4011791B0C70A800BC759A /* UI.storyboard in Resources */,
@@ -286,6 +285,7 @@
 				EC4011651B0BC81C00BC759A /* Currency.swift in Sources */,
 				EC4011631B0BC73400BC759A /* Basket.swift in Sources */,
 				EC40113E1B0BC2A600BC759A /* AppDelegate.swift in Sources */,
+				EC4011841B0D1CB900BC759A /* ResultViewController.swift in Sources */,
 				EC4011671B0BCABD00BC759A /* JSONRatesAPI.swift in Sources */,
 				EC40117D1B0C75E100BC759A /* PrettyImageView.swift in Sources */,
 				EC40116A1B0BCB3100BC759A /* SwiftyJSON.swift in Sources */,
@@ -312,14 +312,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EC4011411B0BC2A600BC759A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC4011421B0BC2A600BC759A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC4011461B0BC2A600BC759A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -496,6 +488,7 @@
 				EC4011591B0BC2A600BC759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC40115A1B0BC2A600BC759A /* Build configuration list for PBXNativeTarget "iOS Dev AssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +497,7 @@
 				EC40115C1B0BC2A600BC759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
