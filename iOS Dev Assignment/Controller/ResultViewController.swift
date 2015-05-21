@@ -41,7 +41,9 @@ class ResultViewController: UIViewController, UITableViewDataSource {
         let (goodItem, amount) = Array(basket.goodsList)[indexPath.row]
         
         cell.textLabel!.text = "\(goodItem.name) x \(amount)"
-        cell.detailTextLabel!.text = "\(basket.currentCurrency.factorToGBP * Double(amount) * goodItem.priceInGBP) \(basket.currentCurrency.name)"
+        let goodItemsPrice = basket.currentCurrency.factorToGBP * Double(amount) * goodItem.priceInGBP
+        let roundedPrice = Double(round(100 * goodItemsPrice) / 100)
+        cell.detailTextLabel!.text = "\(roundedPrice) \(basket.currentCurrency.name)"
         
         return cell
     }

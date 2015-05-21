@@ -34,7 +34,7 @@ class Basket {
         for item in goods {
             total += item.priceInGBP * currentCurrency.factorToGBP
         }
-        return total
+        return Double(round(100 * total) / 100)
     }
     
     func getAmountOfGoodItems(item: GoodItem) -> Int {
