@@ -10,10 +10,12 @@ import Foundation
 
 class Currency {
     let name: String
+    let longName: String
     let factorToGBP: Double
     
-    init(name: String, factorToGBP: Double) {
+    init(name: String, longName: String, factorToGBP: Double) {
         self.name = name
+        self.longName = longName
         self.factorToGBP = factorToGBP
     }
 }

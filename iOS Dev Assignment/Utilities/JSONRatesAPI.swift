@@ -9,8 +9,8 @@
 import Foundation
 
 class JSONRatesAPI {
-    static let key = "jr-e25c758cf97ba7416718de6906b9ccff"
-    static let url = "http://jsonrates.com/get/?"
+    private static let key = "jr-e25c758cf97ba7416718de6906b9ccff"
+    private static let url = "http://jsonrates.com/get/?"
     
     class func convert(fromCurrency: String, toCurrency: String, completionHandler: (Double) -> ()) {
         let requestURL = NSURL(string: url + "from=" + fromCurrency + "&to=" + toCurrency + "&apiKey=" + key)
@@ -55,4 +55,39 @@ class JSONRatesAPI {
             }
         }
     }
+    
+    class func requestCurrenciesList(completionHandler: ([String: String]) -> ()) {
+        let requestURL = NSURL(string: "http://jsonrates.com/currencies.json")
+        let request = NSURLRequest(URL: requestURL!)
+        
+        let queue = NSOperationQueue()
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
+            if (error != nil) {
+                println(error)
+                return
+            }
+            let json = JSON(data: data)
+            if let currList = json.dictionary {
+                var currDictionary = [String: String]()
+                for curr in currList {
+                    if let currName = curr.1.string {
+                        currDictionary.updateValue(currName, forKey: curr.0)
+                    }
+                }
+                completionHandler(currDictionary)
+            } else {
+                println("Error in parsing JSON: " + json.description)
+            }
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+

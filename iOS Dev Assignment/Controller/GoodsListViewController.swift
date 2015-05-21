@@ -13,7 +13,7 @@ let reuseIdentifier = "GoodCardCell"
 class GoodsListCollectionViewController: UICollectionViewController {
 
     var goodsList = [GoodItem]()
-    let basket = Basket(currency: Currency(name: "GBP", factorToGBP: 1.0))
+    let basket = Basket(currency: Currency(name: "GBP", longName: "Pound Sterling", factorToGBP: 1.0))
     
     override func viewDidLoad() {
         super.viewDidLoad()

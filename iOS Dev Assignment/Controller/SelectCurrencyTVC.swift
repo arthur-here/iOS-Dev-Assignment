@@ -21,15 +21,19 @@ class SelectCurrencyTVC: UITableViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         refreshControl?.beginRefreshing()
         
-        JSONRatesAPI.requestAllRates("GBP") { (currenciesDictionary) -> () in
-            self.currencies.removeAll(keepCapacity: false)
-            for curr in currenciesDictionary {
-                self.currencies.append(Currency(name: curr.0, factorToGBP: curr.1))
-            }
-            dispatch_async(dispatch_get_main_queue()) {
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                self.refreshControl?.endRefreshing()
-                self.tableView.reloadData()
+        JSONRatesAPI.requestCurrenciesList { (currList) in
+            JSONRatesAPI.requestAllRates("GBP") { (currenciesDictionary) -> () in
+                self.currencies.removeAll(keepCapacity: false)
+                for curr in currenciesDictionary {
+                    if let longname = currList[curr.0] {
+                        self.currencies.append(Currency(name: curr.0, longName: longname, factorToGBP: curr.1))
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue()) {
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    self.refreshControl?.endRefreshing()
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -49,6 +53,7 @@ class SelectCurrencyTVC: UITableViewController {
 
         let curr = currencies[indexPath.row]
         cell.textLabel!.text = curr.name
+        cell.detailTextLabel!.text = curr.longName
 
         return cell
     }
