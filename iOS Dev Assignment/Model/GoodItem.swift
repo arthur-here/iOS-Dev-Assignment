@@ -11,16 +11,18 @@ import UIKit
 class GoodItem : Hashable {
     let name: String
     let priceInGBP: Double
+    let containerName: String
     let image: UIImage?
     
-    init(name: String, priceInGBP: Double, image: UIImage?) {
+    init(name: String, priceInGBP: Double, containerName: String, image: UIImage?) {
         self.name = name
         self.priceInGBP = priceInGBP
+        self.containerName = containerName
         self.image = image
     }
     
-    convenience init(name: String, priceInGBP: Double) {
-        self.init(name: name, priceInGBP: priceInGBP, image: nil)
+    convenience init(name: String, containerName: String, priceInGBP: Double) {
+        self.init(name: name, priceInGBP: priceInGBP, containerName: containerName, image: nil)
     }
     
     // MARK: - Hashable

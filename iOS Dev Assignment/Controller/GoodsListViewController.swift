@@ -25,10 +25,10 @@ class GoodsListCollectionViewController: UICollectionViewController {
     }
     
     func setupData() {
-        let milk = GoodItem(name: "Milk", priceInGBP: 0.95, image: UIImage(named: "milk"))
-        let cola = GoodItem(name: "Cola", priceInGBP: 0.50, image: UIImage(named: "cola"))
-        let beer = GoodItem(name: "Beer", priceInGBP: 4.99, image: UIImage(named: "beer"))
-        let wine = GoodItem(name: "Wine", priceInGBP: 10.90, image: UIImage(named: "wine"))
+        let milk = GoodItem(name: "Milk", priceInGBP: 0.95, containerName: "carton", image: UIImage(named: "milk"))
+        let cola = GoodItem(name: "Cola", priceInGBP: 0.50, containerName: "can", image: UIImage(named: "cola"))
+        let beer = GoodItem(name: "Beer", priceInGBP: 4.99, containerName: "pack", image: UIImage(named: "beer"))
+        let wine = GoodItem(name: "Wine", priceInGBP: 10.90, containerName: "bottle", image: UIImage(named: "wine"))
         goodsList += [milk, cola, beer, wine]
     }
 
@@ -49,7 +49,7 @@ class GoodsListCollectionViewController: UICollectionViewController {
     
         let g = goodsList[indexPath.row]
         cell.goodNameLabel?.text = g.name
-        cell.goodPriceLabel?.text = "\(g.priceInGBP) GBP"
+        cell.goodPriceLabel?.text = "£\(g.priceInGBP) per \(g.containerName)"
         cell.image = g.image
 
         cell.plusButton.addTarget(self, action: Selector("plusButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
