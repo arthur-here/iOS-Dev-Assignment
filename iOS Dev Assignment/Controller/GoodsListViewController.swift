@@ -50,7 +50,7 @@ class GoodsListCollectionViewController: UICollectionViewController {
         let g = goodsList[indexPath.row]
         cell.goodNameLabel?.text = g.name
         cell.goodPriceLabel?.text = "£\(g.priceInGBP) per \(g.containerName)"
-        cell.image = g.image
+        cell.setImage(g.image, animated: true, delay: Double(indexPath.row) / 2)
 
         cell.plusButton.addTarget(self, action: Selector("plusButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)
         cell.minusButton.addTarget(self, action: Selector("minusButtonPressed:"), forControlEvents: UIControlEvents.TouchUpInside)

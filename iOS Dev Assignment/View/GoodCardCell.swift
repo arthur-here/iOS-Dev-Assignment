@@ -17,18 +17,26 @@ class GoodCardCell: UICollectionViewCell {
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     
-    var image: UIImage? {
-        didSet {
-            let imageView = PrettyImageView(image: image, frame: goodImageView.bounds)
-            imageView.animationDuration = 1.0
-            goodImageView.subviews.first?.removeFromSuperview()
-            goodImageView.addSubview(imageView)
-            imageView.animate()
-        }
-    }
-    
     override func didMoveToSuperview() {
         layer.cornerRadius = 3
         layer.masksToBounds = true
+    }
+    
+    func setImage(image: UIImage?, animated: Bool, delay: Double = 0.0) {
+        if image == nil {
+            return
+        }
+        let imageView = PrettyImageView(image: image!, frame: goodImageView.bounds)
+        imageView.animationDuration = animated ? (1.0) : (0.0)
+        goodImageView.subviews.first?.removeFromSuperview()
+        goodImageView.addSubview(imageView)
+        if delay > 0 {
+            let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+            dispatch_after(delay, dispatch_get_main_queue()) {
+                imageView.animate()
+            }
+        } else {
+            imageView.animate()
+        }
     }
 }

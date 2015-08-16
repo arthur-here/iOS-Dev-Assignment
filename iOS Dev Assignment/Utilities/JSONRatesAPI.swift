@@ -9,49 +9,49 @@
 import Foundation
 
 class JSONRatesAPI {
-    private static let key = "jr-e25c758cf97ba7416718de6906b9ccff"
-    private static let url = "http://jsonrates.com/get/?"
+    private static let key = "6f5abeb086ac142f3376b3b74c0bd304"
+    private static let url = "http://apilayer.net/api/"
     
     class func convert(fromCurrency: String, toCurrency: String, completionHandler: (Double) -> ()) {
-        let requestURL = NSURL(string: url + "from=" + fromCurrency + "&to=" + toCurrency + "&apiKey=" + key)
+        let requestURL = NSURL(string: url + "convert?" + "from=" + fromCurrency + "&to=" + toCurrency + "&amount=1&access_key=" + key)
         let request = NSURLRequest(URL: requestURL!)
         
         let queue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
                 return
             }
-            let json = JSON(data: data)
+            let json = JSON(data: data!)
             if let rate = json["rate"].double {
                 completionHandler(rate)
             } else {
-                println("Error in parsing JSON: " + json.description)
+                print("Error in parsing JSON: " + json.description)
             }
         }
     }
     
     class func requestAllRates(base: String, completionHander: ([String: Double]) -> ()) {
-        let requestURL = NSURL(string: url + "base=" + base + "&apiKey=" + key)
+        let requestURL = NSURL(string: url + "live?access_key=" + key)
         let request = NSURLRequest(URL: requestURL!)
         
         let queue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
                 return
             }
-            let json = JSON(data: data)
-            if let rates = json["rates"].dictionary {
+            let json = JSON(data: data!)
+            if let rates = json["quotes"].dictionary {
                 var ratesDictionary = [String: Double]()
                 for rate in rates {
-                    if let priceString = rate.1.string {
-                        ratesDictionary.updateValue((priceString as NSString).doubleValue, forKey: rate.0)
+                    if let price = rate.1.double {
+                        ratesDictionary.updateValue(price, forKey: rate.0.stringByReplacingOccurrencesOfString("USD", withString: ""))
                     }
                 }
                 completionHander(ratesDictionary)
             } else {
-                println("Error in parsing JSON: " + json.description)
+                print("Error in parsing JSON: " + json.description)
             }
         }
     }
@@ -63,10 +63,10 @@ class JSONRatesAPI {
         let queue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
                 return
             }
-            let json = JSON(data: data)
+            let json = JSON(data: data!)
             if let currList = json.dictionary {
                 var currDictionary = [String: String]()
                 for curr in currList {
@@ -76,7 +76,7 @@ class JSONRatesAPI {
                 }
                 completionHandler(currDictionary)
             } else {
-                println("Error in parsing JSON: " + json.description)
+                print("Error in parsing JSON: " + json.description)
             }
         }
     }

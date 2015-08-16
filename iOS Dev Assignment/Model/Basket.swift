@@ -21,7 +21,7 @@ class Basket {
     var goodsList: [GoodItem: Int] {
         var result = [GoodItem: Int]()
         for item in goods {
-            if !contains(result.keys, item) {
+            if !result.keys.contains(item) {
                 result[item] = 0
             }
             result[item]!++
@@ -58,7 +58,7 @@ class Basket {
     }
     
     private func getGoodItemIndex(item: GoodItem) -> Int? {
-        for (i, g) in enumerate(goods) {
+        for (i, g) in goods.enumerate() {
             if g == item {
                 return i
             }

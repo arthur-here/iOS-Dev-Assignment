@@ -49,7 +49,7 @@ class SelectCurrencyTVC: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SelectCurrencyCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SelectCurrencyCell", forIndexPath: indexPath) 
 
         let curr = currencies[indexPath.row]
         cell.textLabel!.text = curr.name

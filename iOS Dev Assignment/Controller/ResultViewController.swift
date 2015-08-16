@@ -36,7 +36,7 @@ class ResultViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GoodItemInfo") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("GoodItemInfo")!
         
         let (goodItem, amount) = Array(basket.goodsList)[indexPath.row]
         
