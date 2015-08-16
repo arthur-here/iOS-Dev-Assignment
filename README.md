@@ -1,6 +1,8 @@
 # iOS-Dev-Assignment
 My solution for a iOS developer position assignment 
 
+![](http://i.imgur.com/eKWRIK9.gif)
+
 #Original assignment
 
 Write a mobile application that can price a basket of goods in a number of different currencies. The goods that can be purchased, which are all priced in GBP, are: 
