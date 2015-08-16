@@ -27,7 +27,7 @@ class GoodCardCell: UICollectionViewCell {
             return
         }
         let imageView = PrettyImageView(image: image!, frame: goodImageView.bounds)
-        imageView.animationDuration = animated ? (1.0) : (0.0)
+        imageView.animationDuration = animated ? (0.8) : (0.0)
         goodImageView.subviews.first?.removeFromSuperview()
         goodImageView.addSubview(imageView)
         if delay > 0 {
